@@ -39,7 +39,7 @@ variable "cidr_blocks" {
 }
 
 variable "sg_tags" {
-    default = {
+    default = { 
         Name = "allow-all"
     }
 }
