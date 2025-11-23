@@ -11,18 +11,19 @@ variable "instance_type" {
 variable "ec2_tags"{
     type = map (string)
     default = {
-        name = "helloworld"
-        purpose = "variable-demo"
+        Name = "helloworld"
+        Purpose = "variable-demo"
     }
 }
 variable "sg_name"{
-    default = "var-allow-all-variables"
+    default = "allow-all"
 
 }
 variable "sg_description" {
     default = "allowin all ports from internet" 
 }
 variable "from_port"{
+    type = number
     default = 0
 }
 variable "to_port"{
@@ -37,7 +38,7 @@ variable "cidr_blocks"{
 
 variable "sg_tags" {
     default = {
-        name = "allow-all"
+        Name = "allow-all-sg"
     }
   
 }

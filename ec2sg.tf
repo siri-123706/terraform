@@ -15,13 +15,13 @@ resource "aws_security_group" "allow_all" {
     from_port        = var.ami_id
     to_port          = var.to_port
     protocol         = "-1" # -1 allow all inbound  tarffic 
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = var.cidr_blocks 
     ipv6_cidr_blocks = ["::/0"]
   }
 
   egress {
     from_port        = var.from_port
-    to_port          = var.to_port
+    to_port          = var.to_port 
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
@@ -32,3 +32,4 @@ resource "aws_security_group" "allow_all" {
      Name = "allow_all"
   }
 }
+

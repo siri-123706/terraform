@@ -22,7 +22,7 @@ resource "aws_security_group" "allow_all_dev" {
         Name = "allow-all-dev"
     }
 
-    provider = aws.dev
+    provider = aws.dev #this resources goes to dev account 
 }
 
 resource "aws_security_group" "allow_all_prod" { #prod resource created in sapreate accouct
